@@ -93,3 +93,27 @@ When you've completed testing, delete the screenshots and delete the test conver
 ## Success Criteria
 
 The project is only successful when you can run the script to build the container, then run the application end-to-end, carry out full testing with the user, avatar and human participating (and multiple users with different conversation_ids). The tests should include multiple screenshots. The tests should be fully documented in the test/ folder. Only conclude the project when your extensive testing is completed and working well and looking great.
+
+## Questions and Answers
+
+Clarifications agreed before starting work:
+
+1. **Supabase credentials.** Not yet in `.env`. Setting up the Supabase project (and adding `SUPABASE_URL` + service key) is the first task we do together, before building.
+
+2. **Model.** `.env` currently has `MODEL=openai/gpt-5.4-nano`, ready for testing. The model name is read from the `MODEL` env var (OpenRouter `openai/...` prefix).
+
+3. **Knowledge / RAG.** No vector DB. Inline `summary.txt` + extracted `linkedin.pdf` text into the system prompt, and expose `faq.jsonl` via the numbered `faq_tool` plus the `Qn` instant-answer shortcut. (The old qdrant reference was from another project and has been removed from `next_level.ipynb`.)
+
+4. **Human-in-the-loop semantics.** When the human posts from admin, the Avatar does NOT react to it. The human's message is inserted into the thread; the full conversation (including it) is provided to the Avatar the next time the visitor submits something. To the visitor, the human's message renders as a separate bubble using the profile pic, but with NO name shown anywhere (students may build this for themselves, so the human's name must never be hardcoded).
+
+5. **Needs-human + read/unread state.** Persist these as fields on each message row in the conversation table: a `needs_attention` flag (set when `push_tool` fires) and an unread / read marker. Both cleared/updated when the human opens the thread in admin.
+
+6. **Admin auth.** `POST /admin/login` with `ADMIN_PASSWORD` returns a signed session token (httpOnly cookie) guarding all `/admin/*` APIs. Visitors stay anonymous, addressed only by an unguessable `conversation_id` UUID held in their cookie (possession of the id = access to that thread).
+
+7. **Avatar's robotic icon.** The human will provide the robotic version of `pic.jpg` separately. `pic.jpg` is the human icon; the robotic image is the Avatar icon.
+
+8. **Frontend.** Vanilla TypeScript with Vite — no React/Vue framework.
+
+9. **Streaming vs polling.** Stream the Avatar's reply to the active visitor via SSE (showing tool use in small font). The 10s/60s poll is only for picking up the human's async messages.
+
+10. **Contact capture.** Keep the behavior from `context.py`: when a visitor wants to get in touch, the twin asks for their email and pushes it to the human via Pushover.
