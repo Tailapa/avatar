@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shashank Venkatesh — Data Scientist · Policy Researcher · GenAI Engineer</title>
+  <meta name="description"
+    content="Portfolio of Shashank Venkatesh (Tailapa) — data scientist, policy researcher, and GenAI engineer based in Bengaluru.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- ============================================================
+     NAV
+     ============================================================ -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <span class="nav-monogram">SV</span>
+      <ul class="nav-links">
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <button class="theme-toggle-btn" id="themeToggle" aria-label="Toggle light/dark mode" title="Toggle light/dark">
+          <!-- Sun icon (shown in dark mode) -->
+          <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4" />
+            <path
+              d="M12 2.6v2.4M12 19v2.4M2.6 12h2.4M19 12h2.4M5.3 5.3l1.7 1.7M17 17l1.7 1.7M18.7 5.3L17 7M7 17l-1.7 1.7" />
+          </svg>
+          <!-- Moon icon (shown in light mode) -->
+          <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20 14.2A8 8 0 0 1 9.8 4 8 8 0 1 0 20 14.2z" />
+          </svg>
+        </button>
+        <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile drawer -->
+  <div class="nav-drawer" id="nav-drawer" role="navigation" aria-label="Mobile navigation">
+    <ul>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- ============================================================
+     HERO
+     ============================================================ -->
+  <section id="hero">
+    <div class="hero-bg-glow" aria-hidden="true"></div>
+    <div class="hero-content">
+      <h1 class="hero-name">
+        <div class="hero-name-glow" aria-hidden="true"></div>
+        <span>Shashank</span>
+        <span>Venkatesh</span>
+      </h1>
+      <p class="hero-subtitle">Aspiring Data Scientist · GenAI Engineer · Policy Researcher</p>
+      <p class="hero-bio">
+        Bengaluru-based. Building at the intersection of machine learning,
+        geospatial analysis, and governance research.
+      </p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn-primary">View Projects</a>
+        <a href="mailto:shashankv285@gmail.com?subject=Resume%20Request" class="btn-ghost"
+          aria-label="Request resume via email">Download Resume</a>
+        <button class="btn-ghost-cyan" onclick="document.getElementById('chat-trigger').click()">Chat with My Twin
+          →</button>
+      </div>
+      <div class="ticker-wrap" aria-hidden="true">
+        <div class="ticker">
+          <span class="ticker-item">Python</span>
+          <span class="ticker-item">LangGraph</span>
+          <span class="ticker-item">CrewAI</span>
+          <span class="ticker-item">Google Earth Engine</span>
+          <span class="ticker-item">FastAPI</span>
+          <span class="ticker-item">PyTorch</span>
+          <span class="ticker-item">MCP</span>
+          <span class="ticker-item">QGIS</span>
+          <span class="ticker-item">RAG</span>
+          <span class="ticker-item">Docker</span>
+          <span class="ticker-item">Policy Research</span>
+          <span class="ticker-item">Supabase</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     EXPERIENCE
+     ============================================================ -->
+  <section id="experience">
+    <div class="container">
+      <h2 class="section-label reveal">Experience</h2>
+      <div class="timeline">
+
+        <!-- Entry 1 -->
+        <div class="exp-card reveal" tabindex="0" role="button" aria-expanded="false">
+          <div class="exp-header">
+            <div>
+              <div class="exp-title">Intern — Campaigns Infrastructure &amp; Tech</div>
+              <div class="exp-org">Varahe Analytics</div>
+              <div class="exp-meta mono">Noida · Jun 2026 – Present</div>
+            </div>
+            <span class="exp-chevron" aria-hidden="true">&#8964;</span>
+          </div>
+          <div class="exp-body" aria-hidden="true">
+            <div class="exp-body-inner">
+              <ul>
+                <li>Electoral data and campaigns infrastructure technology role at India's leading political consulting
+                  firm.</li>
+                <li>Applies GenAI and agentic AI tooling to political data workflows and campaign strategy.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Entry 2 -->
+        <div class="exp-card reveal" tabindex="0" role="button" aria-expanded="false">
+          <div class="exp-header">
+            <div>
+              <div class="exp-title">Fellow</div>
+              <div class="exp-org">Chanakya University Policy Programme</div>
+              <div class="exp-meta mono">Bengaluru · 2025 – Present</div>
+            </div>
+            <span class="exp-chevron" aria-hidden="true">&#8964;</span>
+          </div>
+          <div class="exp-body" aria-hidden="true">
+            <div class="exp-body-inner">
+              <ul>
+                <li>Statistical analysis on large socio-economic datasets (PLFS: 1L and 4L observations, ~60 features).
+                </li>
+                <li>M&amp;E reports, analytical briefs, and interactive dashboards for academic and policy stakeholders.
+                </li>
+                <li>Version-controlled data pipelines with documented codebooks and SOPs.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Entry 3 -->
+        <div class="exp-card reveal" tabindex="0" role="button" aria-expanded="false">
+          <div class="exp-header">
+            <div>
+              <div class="exp-title">Field Researcher</div>
+              <div class="exp-org">GRAAM–Chanakya University Policy Bootcamp</div>
+              <div class="exp-meta mono">Mysuru · May 2026</div>
+            </div>
+            <span class="exp-chevron" aria-hidden="true">&#8964;</span>
+          </div>
+          <div class="exp-body" aria-hidden="true">
+            <div class="exp-body-inner">
+              <ul>
+                <li>Five-day immersive field programme; 103 households surveyed in Hunsur Block using Kobo Toolbox.</li>
+                <li>Produced Jupyter notebook, PPTX, and dark-themed Plotly HTML dashboard.</li>
+                <li>Received Policy Bootcamp Certificate from GRAAM and Chanakya University.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Entry 4 -->
+        <div class="exp-card reveal" tabindex="0" role="button" aria-expanded="false">
+          <div class="exp-header">
+            <div>
+              <div class="exp-title">Intern, Data &amp; Spatial Analysis</div>
+              <div class="exp-org">Karnataka Power Corporation Limited (KPCL)</div>
+              <div class="exp-meta mono">Bengaluru · Nov 2019 – Feb 2020</div>
+            </div>
+            <span class="exp-chevron" aria-hidden="true">&#8964;</span>
+          </div>
+          <div class="exp-body" aria-hidden="true">
+            <div class="exp-body-inner">
+              <ul>
+                <li>District-level solar radiation estimation using NREL PVWatts; modelled 9.13 MW grid-connected PV
+                  system.</li>
+                <li>Capacity estimation and performance forecasting for infrastructure planning.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /timeline -->
+    </div>
+  </section>
+
+  <!-- ============================================================
+     PROJECTS
+     ============================================================ -->
+  <section id="projects">
+    <div class="container">
+      <h2 class="section-label reveal">Projects</h2>
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+
+        <div class="project-card reveal" tabindex="0" role="button"
+          aria-label="Avatar — AI Digital Agent — click to expand">
+          <div class="project-card-inner">
+            <div class="project-card-front">
+              <div class="project-name">Avatar — AI Digital Agent</div>
+              <div class="project-tagline">Agentic AI · Full-Stack</div>
+              <div class="project-front-footer">
+                <span class="project-date mono">2026</span>
+                <span class="project-hint">Tap to expand →</span>
+              </div>
+            </div>
+            <div class="project-card-back">
+              <div class="project-back-title">Avatar — AI Digital Agent</div>
+              <div class="project-desc">Full-stack AI agent platform: an LLM-powered agent representing me online, with
+                tool use (FAQ lookup, Pushover notifications), SSE streaming, human-in-the-loop admin panel, Supabase
+                persistence, and a 3-way visitor/agent/human conversation model. Deployed via Docker on Fly.io.</div>
+              <div class="pill-row">
+                <span class="pill">OpenAI Agents SDK</span>
+                <span class="pill">FastAPI</span>
+                <span class="pill">OpenRouter</span>
+                <span class="pill">Supabase</span>
+                <span class="pill">SSE Streaming</span>
+                <span class="pill">Docker</span>
+                <span class="pill">TypeScript</span>
+                <span class="pill">Fly.io</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal" tabindex="0" role="button"
+          aria-label="Bengaluru Flood Risk Model — click to expand">
+          <div class="project-card-inner">
+            <div class="project-card-front">
+              <div class="project-name">Bengaluru Flood Risk Model</div>
+              <div class="project-tagline">Geospatial Climate ML</div>
+              <div class="project-front-footer">
+                <span class="project-date mono">2024</span>
+                <span class="project-hint">Tap to expand →</span>
+              </div>
+            </div>
+            <div class="project-card-back">
+              <div class="project-back-title">Bengaluru Flood Risk Model</div>
+              <div class="project-desc">Geospatial ML pipeline (R² = 0.64) mapping urban flood vulnerability using noisy
+                environmental and administrative datasets. Results deployed as an interactive Streamlit decision
+                dashboard for public planners.</div>
+              <div class="pill-row">
+                <span class="pill">Google Earth Engine</span>
+                <span class="pill">Sentinel-1/2 SAR</span>
+                <span class="pill">NASA GPM</span>
+                <span class="pill">Python</span>
+                <span class="pill">scikit-learn</span>
+                <span class="pill">Streamlit</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card reveal" tabindex="0" role="button"
+          aria-label="Ramsar Sites Ecological Index — click to expand">
+          <div class="project-card-inner">
+            <div class="project-card-front">
+              <div class="project-name">Ramsar Sites Ecological Index</div>
+              <div class="project-tagline">Environmental Policy</div>
+              <div class="project-front-footer">
+                <span class="project-date mono">2024</span>
+                <span class="project-hint">Tap to expand →</span>
+              </div>
+            </div>
+            <div class="project-card-back">
+              <div class="project-back-title">Ramsar Sites Ecological Index</div>
+              <div class="project-desc">96 Indian wetland sites; composite Diversity Index + Threat Density scoring
+                framework. Identified 21 hotspot sites; produced a 6-point evidence-based policy recommendation.</div>
+              <div class="pill-row">
+                <span class="pill">Python</span>
+                <span class="pill">Spatial Analysis</span>
+                <span class="pill">Policy Research</span>
+                <span class="pill">Data Viz</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card reveal" tabindex="0" role="button"
+          aria-label="Energy Transition HGBR Forecasting — click to expand">
+          <div class="project-card-inner">
+            <div class="project-card-front">
+              <div class="project-name">Energy Transition HGBR Forecasting</div>
+              <div class="project-tagline">Policy ML</div>
+              <div class="project-front-footer">
+                <span class="project-date mono">2024</span>
+                <span class="project-hint">Tap to expand →</span>
+              </div>
+            </div>
+            <div class="project-card-back">
+              <div class="project-back-title">Energy Transition HGBR Forecasting</div>
+              <div class="project-desc">176-country panel dataset; HistGradientBoostingRegressor with lag leakage
+                correction, scenario simulation, and permutation importance analysis.</div>
+              <div class="pill-row">
+                <span class="pill">Python</span>
+                <span class="pill">scikit-learn</span>
+                <span class="pill">Panel Data</span>
+                <span class="pill">Policy</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="project-card reveal" tabindex="0" role="button"
+          aria-label="GRAAM Field Survey Dashboard — click to expand">
+          <div class="project-card-inner">
+            <div class="project-card-front">
+              <div class="project-name">GRAAM Field Survey Dashboard</div>
+              <div class="project-tagline">Data Engineering</div>
+              <div class="project-front-footer">
+                <span class="project-date mono">May 2026</span>
+                <span class="project-hint">Tap to expand →</span>
+              </div>
+            </div>
+            <div class="project-card-back">
+              <div class="project-back-title">GRAAM Field Survey Dashboard</div>
+              <div class="project-desc">103-household primary survey from Hunsur Block, Mysuru District; dark-themed
+                interactive Plotly HTML dashboard covering welfare scheme access and infrastructure gaps.</div>
+              <div class="pill-row">
+                <span class="pill">Python</span>
+                <span class="pill">Plotly</span>
+                <span class="pill">Kobo Toolbox</span>
+                <span class="pill">HTML</span>
+                <span class="pill">Field Research</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 7 -->
+
+      </div><!-- /projects-grid -->
+    </div>
+  </section>
+
+  <!-- ============================================================
+     SKILLS
+     ============================================================ -->
+  <section id="skills">
+    <div class="container">
+      <h2 class="section-label reveal">Skills</h2>
+      <div class="skills-grid">
+
+        <div class="reveal">
+          <div class="skill-group-label">Data Science &amp; ML</div>
+          <div class="skill-pills">
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">R</span>
+            <span class="skill-pill">PyTorch</span>
+            <span class="skill-pill">scikit-learn</span>
+            <span class="skill-pill">HuggingFace</span>
+            <span class="skill-pill">STATA</span>
+            <span class="skill-pill">pandas</span>
+            <span class="skill-pill">numpy</span>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <div class="skill-group-label">GenAI &amp; Agentic AI</div>
+          <div class="skill-pills">
+            <span class="skill-pill">LangChain</span>
+            <span class="skill-pill">LangGraph</span>
+            <span class="skill-pill">CrewAI</span>
+            <span class="skill-pill">OpenAI SDK</span>
+            <span class="skill-pill">RAG</span>
+            <span class="skill-pill">MCP</span>
+            <span class="skill-pill">FastAPI</span>
+            <span class="skill-pill">Docker</span>
+            <span class="skill-pill">Groq</span>
+            <span class="skill-pill">QLoRA</span>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <div class="skill-group-label">Geospatial</div>
+          <div class="skill-pills">
+            <span class="skill-pill">Google Earth Engine</span>
+            <span class="skill-pill">QGIS</span>
+            <span class="skill-pill">Sentinel-1/2 SAR</span>
+            <span class="skill-pill">NASA GPM</span>
+            <span class="skill-pill">MERIT Hydro</span>
+            <span class="skill-pill">Streamlit</span>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <div class="skill-group-label">Policy &amp; Research</div>
+          <div class="skill-pills">
+            <span class="skill-pill">Policy Brief Writing</span>
+            <span class="skill-pill">Chicago Citations</span>
+            <span class="skill-pill">M&amp;E Frameworks</span>
+            <span class="skill-pill">Kobo Toolbox</span>
+            <span class="skill-pill">Survey Design</span>
+            <span class="skill-pill">PLFS Analysis</span>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <div class="skill-group-label">Visualisation</div>
+          <div class="skill-pills">
+            <span class="skill-pill">Plotly</span>
+            <span class="skill-pill">matplotlib</span>
+            <span class="skill-pill">seaborn</span>
+            <span class="skill-pill">Power BI</span>
+            <span class="skill-pill">Tableau</span>
+            <span class="skill-pill">Canva</span>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <div class="skill-group-label">DevOps &amp; Cloud</div>
+          <div class="skill-pills">
+            <span class="skill-pill">Git/GitHub</span>
+            <span class="skill-pill">Docker</span>
+            <span class="skill-pill">Google Colab</span>
+            <span class="skill-pill">AWS</span>
+            <span class="skill-pill">GCP</span>
+            <span class="skill-pill">Azure</span>
+            <span class="skill-pill">SQL</span>
+            <span class="skill-pill">MySQL</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     EDUCATION
+     ============================================================ -->
+  <section id="education">
+    <div class="container">
+      <h2 class="section-label reveal">Education</h2>
+      <div class="edu-cards">
+
+        <div class="edu-card reveal">
+          <div class="edu-degree">PG Diploma in Social Sciences</div>
+          <div class="edu-institution">Chanakya University, School of Arts, Humanities &amp; Social Sciences</div>
+          <div class="edu-date mono">Bengaluru · October 2025</div>
+          <div class="edu-tags">
+            <span class="edu-tag">Research Methods</span>
+            <span class="edu-tag">Public Policy</span>
+            <span class="edu-tag">International Security</span>
+            <span class="edu-tag">Evaluation Frameworks</span>
+          </div>
+        </div>
+
+        <div class="edu-card reveal">
+          <div class="edu-degree">B.E. Electrical &amp; Electronics Engineering — First Class with Distinction</div>
+          <div class="edu-institution">Sir M. Visvesvaraya Institute of Technology</div>
+          <div class="edu-date mono">Bengaluru · February 2020</div>
+          <div class="edu-note">1st Prize, Final Year Project (2019) — 1 kWh IoT-operated Vertical Axis Wind Turbine.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     CERTIFICATIONS
+     ============================================================ -->
+  <section id="certifications">
+    <div class="container">
+      <h2 class="section-label reveal">Certifications</h2>
+      <div class="cert-grid">
+
+        <!-- Completed -->
+        <div class="cert-card reveal">
+          <div class="cert-name">Policy Bootcamp Certificate</div>
+          <div class="cert-footer">
+            <span class="cert-issuer">GRAAM / Chanakya University</span>
+            <span class="cert-date">May 2026</span>
+          </div>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-name">Data Modeling and Prediction with R</div>
+          <div class="cert-footer">
+            <span class="cert-issuer">Duke University / Coursera</span>
+            <span class="cert-date">Mar 2026</span>
+          </div>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-name">Microsoft Power BI Desktop for Business Intelligence</div>
+          <div class="cert-footer">
+            <span class="cert-issuer">AnalystBuilder</span>
+            <span class="cert-date">Mar 2026</span>
+          </div>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-name">Introduction to Data Science in Python</div>
+          <div class="cert-footer">
+            <span class="cert-issuer">University of Michigan / Coursera</span>
+            <span class="cert-date">Jan 2026</span>
+          </div>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-name">Data Tidying and Importing with R</div>
+          <div class="cert-footer">
+            <span class="cert-issuer">Duke University / Coursera</span>
+            <span class="cert-date">Jan 2026</span>
+          </div>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-name">Data Visualization with R</div>
+          <div class="cert-footer">
+            <span class="cert-issuer">Duke University / Coursera</span>
+            <span class="cert-date">Dec 2025</span>
+          </div>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-name">MySQL for Data Analytics</div>
+          <div class="cert-footer">
+            <span class="cert-issuer">AnalystBuilder</span>
+            <span class="cert-date">Feb 2026</span>
+          </div>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-name">Rationality of War and Game Theory</div>
+          <div class="cert-footer">
+            <span class="cert-issuer">IFPD</span>
+            <span class="cert-date">Dec 2025</span>
+          </div>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-name">Programming DSA Python — Elite</div>
+          <div class="cert-footer">
+            <span class="cert-issuer">NPTEL / IIT Madras</span>
+            <span class="cert-date">2018</span>
+          </div>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-name">Introduction to Internet of Things — Elite</div>
+          <div class="cert-footer">
+            <span class="cert-issuer">NPTEL / IIT Kharagpur</span>
+            <span class="cert-date">2018</span>
+          </div>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-name">Programming in C++ — Elite</div>
+          <div class="cert-footer">
+            <span class="cert-issuer">NPTEL / IIT Kharagpur</span>
+            <span class="cert-date">2017</span>
+          </div>
+        </div>
+
+        <!-- In Progress -->
+        <div class="cert-card in-progress reveal">
+          <div class="cert-name">AI Engineer Core Track</div>
+          <div class="cert-footer">
+            <span class="cert-issuer">Udemy</span>
+            <span class="cert-badge">In Progress</span>
+          </div>
+        </div>
+
+        <div class="cert-card in-progress reveal">
+          <div class="cert-name">AI Engineer Agentic Track</div>
+          <div class="cert-footer">
+            <span class="cert-issuer">Udemy</span>
+            <span class="cert-badge">In Progress</span>
+          </div>
+        </div>
+
+        <div class="cert-card in-progress reveal">
+          <div class="cert-name">AI Engineer Production Track</div>
+          <div class="cert-footer">
+            <span class="cert-issuer">Udemy</span>
+            <span class="cert-badge">In Progress</span>
+          </div>
+        </div>
+
+        <div class="cert-card in-progress reveal">
+          <div class="cert-name">LangChain Agentic AI Engineering</div>
+          <div class="cert-footer">
+            <span class="cert-issuer">Udemy</span>
+            <span class="cert-badge">In Progress</span>
+          </div>
+        </div>
+
+        <div class="cert-card in-progress reveal">
+          <div class="cert-name">PyTorch for Deep Learning</div>
+          <div class="cert-footer">
+            <span class="cert-issuer">Udemy</span>
+            <span class="cert-badge">In Progress</span>
+          </div>
+        </div>
+
+        <div class="cert-card in-progress reveal">
+          <div class="cert-name">Machine Learning NLP V2</div>
+          <div class="cert-footer">
+            <span class="cert-issuer">Udemy</span>
+            <span class="cert-badge">In Progress</span>
+          </div>
+        </div>
+
+        <div class="cert-card in-progress reveal">
+          <div class="cert-name">Map Academy QGIS</div>
+          <div class="cert-footer">
+            <span class="cert-issuer">Udemy</span>
+            <span class="cert-badge">In Progress</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     CONTACT
+     ============================================================ -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-label reveal">Contact</h2>
+
+      <div class="contact-items reveal">
+        <div class="contact-item">
+          <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3.5" y="5.5" width="17" height="13" rx="2" />
+            <path d="M4 7l8 5.5L20 7" />
+          </svg>
+          <a class="contact-link" href="mailto:shashankv285@gmail.com">shashankv285@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+            <rect x="2" y="9" width="4" height="12" />
+            <circle cx="4" cy="4" r="2" />
+          </svg>
+          <a class="contact-link" href="https://www.linkedin.com/in/shashank-venkatesh-53501b16b/" target="_blank"
+            rel="noopener">linkedin.com/in/shashank-venkatesh</a>
+        </div>
+        <div class="contact-item">
+          <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+          </svg>
+          <a class="contact-link" href="https://github.com/Tailapa" target="_blank"
+            rel="noopener">github.com/Tailapa</a>
+        </div>
+      </div>
+
+      <div class="chat-cta reveal" id="chat-cta" role="button" aria-label="Open chat with digital twin">
+        <div class="chat-cta-icon" aria-hidden="true">
+          <img src="/portfolio-assets/pic.jpg" alt="Shashank Venkatesh"
+            style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
+        </div>
+        <div class="chat-cta-text">
+          <strong>Chat with my Digital Twin</strong>
+          <p>Ask about my work, projects, or background — click the chat button below.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <p class="footer-note">Shashank Venkatesh · Bengaluru · shashankv285@gmail.com</p>
+
+  <!-- ============================================================
+     CHAT WIDGET
+     ============================================================ -->
+  <button id="chat-trigger" aria-label="Open chat with digital twin">
+    <img class="chat-trigger-img" src="/portfolio-assets/pic.jpg" alt="Chat with Shashank's digital twin">
+  </button>
+
+  <div id="chat-panel" role="dialog" aria-label="Digital twin chat" aria-modal="true">
+    <iframe data-src="/chat" title="Chat with Shashank Venkatesh's digital twin" allow="autoplay"></iframe>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+
+</html>

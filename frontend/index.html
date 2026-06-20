@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Avatar — Digital Twin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,500&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,18..72,400;0,18..72,500;0,18..72,600;1,18..72,400;1,18..72,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/tokens.css">
+<link rel="stylesheet" href="/components.css">
+<link rel="stylesheet" href="/chat.css">
+</head>
+<body class="hud-grid">
+
+<!-- ICON SPRITE (inlined for self-containment) -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true"><defs><style>
+  symbol{fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+  symbol .fill{fill:currentColor;stroke:none}</style></defs>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M12 20V5"/><path d="M6 11l6-6 6 6"/></symbol>
+  <symbol id="i-reset" viewBox="0 0 24 24"><path d="M19.5 12a7.5 7.5 0 1 1-2.2-5.3"/><path d="M19.7 4.5v3.3h-3.3"/></symbol>
+  <symbol id="i-visitor" viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="3.3"/><path d="M5.5 19.2a6.6 6.6 0 0 1 13 0"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3.2l1.9 6.5 6.5 1.9-6.5 1.9L12 20l-1.9-6.5L3.6 11.6l6.5-1.9z"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.6v2.4M12 19v2.4M2.6 12h2.4M19 12h2.4M5.3 5.3l1.7 1.7M17 17l1.7 1.7M18.7 5.3L17 7M7 17l-1.7 1.7"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.2A8 8 0 0 1 9.8 4 8 8 0 1 0 20 14.2z"/></symbol>
+  <symbol id="i-tool" viewBox="0 0 24 24"><rect x="5" y="6" width="14" height="12" rx="2"/><path d="M8.5 10.5l2 1.5-2 1.5"/><path d="M12.5 14h3"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.3L19 7"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3.5" y="5.5" width="17" height="13" rx="2"/><path d="M4 7l8 5.5L20 7"/></symbol>
+  <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M4.5 12h14"/><path d="M13 6.5l5.5 5.5L13 17.5"/></symbol>
+  <symbol id="i-live" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2.2" class="fill"/><path d="M7.8 7.8a6 6 0 0 0 0 8.4M16.2 16.2a6 6 0 0 0 0-8.4"/><path d="M5 5a9.5 9.5 0 0 0 0 14M19 19a9.5 9.5 0 0 0 0-14"/></symbol>
+</svg>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark" aria-hidden="true">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+        <circle cx="9.5" cy="13" r="5" fill="var(--blue-strong)"/>
+        <circle cx="15.5" cy="13" r="5" stroke="var(--blue-strong)" stroke-width="1.6"/>
+        <circle cx="15.5" cy="13" r="1.4" fill="var(--yellow-strong)"/>
+      </svg>
+    </span>
+    <div>
+      <div class="brand-name">Avatar</div>
+      <div class="brand-sub" id="brandSub">AI agent</div>
+    </div>
+  </div>
+  <div class="topbar-right">
+    <label class="name-field" title="Your name or initials">
+      <svg class="icon icon--sm" style="color:var(--text-faint)"><use href="#i-visitor"/></svg>
+      <input type="text" id="nameInput" placeholder="Your name / initials" autocomplete="off" />
+    </label>
+    <label class="switch" title="Remember this conversation in your browser">
+      <input type="checkbox" id="keepChatInput" checked>
+      <span class="track"><span class="thumb"></span></span>
+      <span class="switch-label">Keep chat</span>
+    </label>
+    <button class="btn btn--ghost btn--sm" id="resetBtn"><svg class="icon icon--sm"><use href="#i-reset"/></svg> Reset</button>
+    <span class="divider-v"></span>
+    <button class="icon-btn" id="themeToggle" title="Toggle light / dark">
+      <svg class="icon icon--sm theme-moon"><use href="#i-moon"/></svg>
+      <svg class="icon icon--sm theme-sun" style="display:none"><use href="#i-sun"/></svg>
+    </button>
+  </div>
+</header>
+
+<main class="chat">
+  <div class="convo scroll" id="convo">
+    <div class="convo-inner" id="convoInner">
+
+      <!-- Intro section (hidden when messages present) -->
+      <div class="intro" id="introSection">
+        <div class="avatar avatar-twin" id="introAvatar" style="background-image:url('/avatar-robot-round.png'); width:72px; height:72px;"></div>
+        <h1>I'm <em id="introOwnerName">the</em> <em>AI agent</em>.<br>Ask me anything — and the real person might just chime in.</h1>
+        <p id="introDesc">Ask me anything — I know the background, expertise, and can put you in touch directly.</p>
+        <div class="suggest-row" id="suggestRow">
+          <button class="chip suggest-chip">Tell me about yourself</button>
+          <button class="chip suggest-chip">What topics do you cover?</button>
+          <button class="chip suggest-chip">Can I talk to the real person?</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Typing indicator (hidden by default) -->
+  <div class="typing-wrap" id="typingWrap" style="display:none">
+    <div class="typing">
+      <span class="dots"><span></span><span></span><span></span></span> Avatar is typing
+    </div>
+  </div>
+
+  <!-- Composer -->
+  <div class="composer-dock">
+    <div class="composer-wrap">
+      <div class="composer" id="composer">
+        <textarea id="composerTextarea" rows="1" placeholder='Message the digital twin…  (type "Q2" for an instant answer)'></textarea>
+        <button class="btn-send" id="sendBtn" title="Send (Enter)"><svg class="icon"><use href="#i-send"/></svg></button>
+      </div>
+      <div class="composer-hint">
+        <span><span class="kbd">Enter</span> to send</span>
+        <span class="sep"></span>
+        <span><span class="kbd">Shift</span>+<span class="kbd">Enter</span> for a new line</span>
+        <span class="sep"></span>
+        <span>Type <strong style="color:var(--blue-ink)">Qn</strong> for an instant FAQ answer</span>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- Error toast -->
+<div class="error-toast" id="errorToast" style="display:none"></div>
+
+<script type="module" src="/src/main.ts"></script>
+</body>
+</html>
